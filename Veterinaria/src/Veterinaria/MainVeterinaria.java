@@ -2,6 +2,7 @@ package Veterinaria;
 
 import Models.Animal;
 import java.util.ArrayList;
+import java.util.List;
 
 import Models.Gato;
 import Models.Perro;
@@ -16,7 +17,7 @@ public class MainVeterinaria {
         Animal firulais = new Gato("Firulais", 6.0);
         
         // Creamos nuestra lista o granja? 🤔 jeje
-        ArrayList<Animal> animalesList = new ArrayList<Animal>();
+        List<Animal> animalesList = new ArrayList<Animal>();
         animalesList.add(boby);
         animalesList.add(michi);
         animalesList.add(toby);
