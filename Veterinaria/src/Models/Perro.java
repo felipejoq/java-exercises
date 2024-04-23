@@ -9,22 +9,27 @@ public class Perro extends Animal {
     }
 
     @Override
+    public void hacerRuido(String ruido) {
+        if(ruido == null) {
+            ruido = "Guau!";
+        }
+        System.out.println(this.getNombre() + " Hace: ");
+        System.out.println(ruido + " 🐶 " + ruido);
+    }
+
+    @Override
     public void comer(String comida) {
-        System.out.println(this.getNombre() + " esta comiendo: " + comida);
+        System.out.println(this.getNombre() + "🐶 esta comiendo: " + comida);
+    }
+
+    @Override
+    public void moverse(String movimiento) {
+        System.out.println(this.getNombre() + " 🐶 " + movimiento);
     }
 
     @Override
     public void dormir() {
-        System.out.println(this.getNombre() + " esta haciendo tuto 🤫");
-    }
-
-    @Override
-    public void emitirSonido(String ruido) {
-    	if(ruido == null) {
-    		ruido = "Guau!";
-    	}
-        System.out.println(this.getNombre() + " Hace: ");
-        System.out.println(ruido + " 🐶 " + ruido);
+        System.out.println(this.getNombre() + " 🐶 esta haciendo tuto 🤫");
     }
 
     public void mostrarDatos() {

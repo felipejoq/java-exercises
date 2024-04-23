@@ -1,6 +1,8 @@
 package Models;
 
-public class Animal {
+import Interfaces.IAnimal;
+
+public class Animal implements IAnimal {
     private String nombre;
     private Double peso;
 
@@ -9,16 +11,8 @@ public class Animal {
         this.peso = peso;
     }
 
-    public void comer(String comida) {
-        System.out.println("El animal está comiendo: " + comida);
-    }
-
     public void dormir() {
         System.out.println("El animal está durmiendo");
-    }
-
-    public void emitirSonido(String ruido) {
-        System.out.println("Ruido del animal");
     }
 
     public String getNombre() {
@@ -35,5 +29,20 @@ public class Animal {
 
     public void setPeso(Double peso) {
         this.peso = peso;
+    }
+
+    @Override
+    public void hacerRuido(String ruido) {
+        System.out.println("El animal hace el siguiente ruido: " + ruido);
+    }
+
+    @Override
+    public void comer(String comida) {
+        System.out.println("El animal está comiendo: " + comida);
+    }
+
+    @Override
+    public void moverse(String movimiento) {
+        System.out.println("El animal se está moviendo así: " + movimiento);
     }
 }
