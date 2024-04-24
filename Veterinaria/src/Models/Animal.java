@@ -11,8 +11,19 @@ public class Animal implements IAnimal {
         this.peso = peso;
     }
 
-    public void dormir() {
-        System.out.println("El animal está durmiendo");
+    @Override
+    public void hacerRuido(String ruido) {
+        System.out.println("El animal hace el siguiente ruido: " + ruido);
+    }
+
+    @Override
+    public void comer(String comida) {
+        System.out.println("El animal está comiendo: " + comida);
+    }
+
+    @Override
+    public void moverse(String movimiento) {
+        System.out.println("El animal se está moviendo así: " + movimiento);
     }
 
     public String getNombre() {
@@ -31,18 +42,8 @@ public class Animal implements IAnimal {
         this.peso = peso;
     }
 
-    @Override
-    public void hacerRuido(String ruido) {
-        System.out.println("El animal hace el siguiente ruido: " + ruido);
+    public void dormir() {
+        System.out.println("El animal está durmiendo");
     }
 
-    @Override
-    public void comer(String comida) {
-        System.out.println("El animal está comiendo: " + comida);
-    }
-
-    @Override
-    public void moverse(String movimiento) {
-        System.out.println("El animal se está moviendo así: " + movimiento);
-    }
 }
