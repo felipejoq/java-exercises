@@ -1,11 +1,12 @@
-package FigurasGeometricas;
+package FigurasGeometricas.Modelos;
 
-public class Circulo extends Figura {
+import FigurasGeometricas.Interfaces.IFigura;
+
+public class Circulo implements IFigura {
 	private double radio;
 
 	
 	public Circulo(double radio) {
-		super();
 		this.radio = radio;
 	}
 

@@ -1,12 +1,13 @@
-package FigurasGeometricas;
+package FigurasGeometricas.Modelos;
 
-public class Triangulo extends Figura {
+import FigurasGeometricas.Interfaces.IFigura;
+
+public class Triangulo implements IFigura {
 
 	private double base;
 	private double altura;
 	
 	public Triangulo(double base, double altura) {
-		super();
 		this.base = base;
 		this.altura = altura;
 	}

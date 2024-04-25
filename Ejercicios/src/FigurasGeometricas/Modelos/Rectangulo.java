@@ -1,6 +1,8 @@
-package FigurasGeometricas;
+package FigurasGeometricas.Modelos;
 
-public class Rectangulo extends Figura {
+import FigurasGeometricas.Interfaces.IFigura;
+
+public class Rectangulo implements IFigura {
 	
 	private double base;
 	private double altura;

@@ -1,12 +1,18 @@
 package FigurasGeometricas;
 
-public class MainFiguras {
+import FigurasGeometricas.Interfaces.ICalculadoraPoligonos;
+import FigurasGeometricas.Interfaces.IFigura;
+import FigurasGeometricas.Modelos.Circulo;
+import FigurasGeometricas.Modelos.Rectangulo;
+import FigurasGeometricas.Modelos.Triangulo;
+import FigurasGeometricas.Utils.CalculadoraPoligonos;
 
+public class MainFiguras {
 	public static void main(String[] args) {
 		
-		Figura rectangulo = new Rectangulo(20.0, 10.0);
-		Figura triangulo = new Triangulo(10.0, 20.0);
-		Figura circulo = new Circulo(2.0);
+		IFigura rectangulo = new Rectangulo(20.0, 10.0);
+		IFigura triangulo = new Triangulo(10.0, 20.0);
+		IFigura circulo = new Circulo(2.0);
 
 		System.out.println("El área del rectángulo es: " + rectangulo.calcularArea());
 		System.out.println("El área del triangulo es: " + triangulo.calcularArea());
@@ -19,5 +25,4 @@ public class MainFiguras {
 		calculadora.dividirAreas(triangulo, circulo);
 
 	}
-
 }
